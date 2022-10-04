@@ -1,7 +1,8 @@
 $font-stack: Poppins, sans-serif;
 $headline-stack:  Playfair Display, serif;
 $primary-color: #2d2d2d;
-$secondery-color: #ededed;
+$secondery-color: #000000;
+$font-color: #ededed;
 
 *, 
 *::before, 
@@ -25,4 +26,37 @@ body{
 }
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
+  }
+
+//   .wrapper{
+//     display: grid;
+//     grid-template-areas: 
+//     "header header header header"
+//     "main main main main"
+//     "footer footer footer footer";
+//     grid-auto-columns: repeat(4, 1fr);
+//     grid-template-rows: 15% 1fr 10%;  
+//     height: 100vh;
+//     margin: 0;
+//   }
+  .wrapper{
+    // display: flex;
+    // flex-direction: column;
+    // height: 100vh;
+    display: grid;
+    grid-template-rows: 6em 1fr 5em;
+    height: 100vh;
+  }
+
+  header{
+    //   height: 6em;
+      background-color: $secondery-color;
+  }
+  main{
+    // flex: 1;
+    overflow: auto;
+  }
+  footer{
+    // height: 5em;
+    background-color: $secondery-color;
   }
