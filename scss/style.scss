@@ -27,36 +27,89 @@ body{
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
   }
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
 
-//   .wrapper{
-//     display: grid;
-//     grid-template-areas: 
-//     "header header header header"
-//     "main main main main"
-//     "footer footer footer footer";
-//     grid-auto-columns: repeat(4, 1fr);
-//     grid-template-rows: 15% 1fr 10%;  
-//     height: 100vh;
-//     margin: 0;
-//   }
+  .wrapper{
+    // display: grid;
+    // grid-template-areas: 
+    // "header header header header"
+    // "main main main main"
+    // "footer footer footer footer";
+    // grid-auto-columns: 1fr;
+    // grid-template-rows: auto 1fr auto;  
+    // height: 100vh;
+    // margin: 0;
+  }
   .wrapper{
     // display: flex;
-    // flex-direction: column;
-    // height: 100vh;
+    // flex-direction: row-reverse;
     display: grid;
-    grid-template-rows: 6em 1fr 5em;
     height: 100vh;
+    grid-template-rows: 6em 1fr 5em;
+    grid-template-columns: 100%;
   }
 
   header{
+    width: 100%;
+    position: sticky;
+    background-color: $secondery-color;
+    top:0;
+    // display: grid;
+    // flex-direction: columns;
     //   height: 6em;
-      background-color: $secondery-color;
   }
+  .cover-header {
+    height: 7em;
+    color: rgb(255, 255, 255);
+    
+    .sticky-header {
+      font-size: 1.4rem;
+    }
+  }
+ 
+.navbar-container{
+    display: flex;
+    flex-direction: column;
+  .logo{
+        color: $font-color;
+        font-family: $headline-stack;  
+        text-align: center;
+        margin-bottom: 0.5em;
+          }
+  .navbar{
+    padding: 0 0.8em;
+    top: 0;
+       ul{
+        display: flex;
+        justify-content: space-around;
+       }
+       li{
+        font-size: 1.2rem;
+       }
+       a{
+        color: $font-color;
+       }
+  }
+}
+
   main{
-    // flex: 1;
+    flex: 1;
     overflow: auto;
+    height: 100vh;
+    font-size: 1rem;
+    background: #eee;
   }
+
   footer{
     // height: 5em;
+    position: sticky;
     background-color: $secondery-color;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
   }
