@@ -130,7 +130,7 @@ main {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-attachment: fixed;
+  // background-attachment: fixed;
 }
 footer {
   position: sticky;
@@ -199,15 +199,99 @@ footer {
     }
   }
 
-  .hero-container {
-    position: relative;
-    background: url(/src/img/desktop/hero-img.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-attachment: fixed;
+  @media screen and (min-width: 479px) {
+    .hero-container {
+      position: relative;
+      background: url(/src/img/desktop/hero-img.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-attachment: fixed;
+      .hero-text-left-side {
+        position: absolute;
+        // -webkit-transform: rotate(-5deg);
+        // -moz-transform: rotate(-55eg);
+        // -ms-transform: rotate(-5deg);
+        // -o-transform: rotate(-5deg);
+      }
+      .hero-design {
+        font-family: $headline-stack;
+        color: #a28950;
+        font-size: 3.5rem;
+      }
+      .hero-photoshop {
+        font-family: $headline-stack;
+        color: #a28950;
+        font-size: 2.5rem;
+      }
+      .hero-illustrator {
+        font-family: $headline-stack;
+        color: #a28950;
+        font-size: 2.5rem;
+      }
+      .hero-indesign {
+        font-family: $headline-stack;
+        color: #a28950;
+        font-size: 2.5rem;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      .hero-text-left-side {
+        position: absolute;
+        // top: 4.3em;
+        line-height: 8em;
+        // top: 36%;
+        // left: 18%;
+        // transform: translate(-50%, -50%);
+        letter-spacing: 1.4em;
+        text-align: center;
+        // -webkit-transform: rotate(-5deg);
+        // -moz-transform: rotate(-55eg);
+        // -ms-transform: rotate(-5deg);
+        // -o-transform: rotate(-5deg);
+      }
+      .hero-design {
+        font-family: $headline-stack;
+        color: #a28950;
+        font-size: 4rem;
+        margin-top: 15%;
+        margin-left: 12%;
+        // top: 70%;
+        // left: 60%;
+        // transform: translate(-49%, -50%);
+        // margin-left: 3.5em;
+      }
+      .hero-photoshop {
+        font-family: $headline-stack;
+        color: #a28950;
+        font-size: 2.5rem;
+        -webkit-transform: rotate(-5deg);
+      }
+      .hero-illustrator {
+        font-family: $headline-stack;
+        color: #a28950;
+        font-size: 2.5rem;
+        margin-top: 2rem;
+        -webkit-transform: rotate(5deg);
+      }
+      .hero-indesign {
+        font-family: $headline-stack;
+        color: #a28950;
+        font-size: 2.5rem;
+        -webkit-transform: rotate(-8deg);
+      }
+    }
+  }
+  .hero-and {
+    position: absolute;
+    color: #a28950;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6em;
   }
 }
