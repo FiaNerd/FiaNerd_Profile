@@ -86,8 +86,6 @@ header {
   }
   .menu {
     text-align: end;
-  }
-  .btn-hamburger + .menu {
     display: none;
     opacity: 0;
     visibility: hidden;
@@ -115,14 +113,12 @@ header {
     margin-left: 1.4em;
   }
 }
-
 main {
   flex: 1;
   overflow: auto;
   height: 100vh;
   font-size: 1rem;
 }
-
 footer {
   position: sticky;
   background-color: $secondery-color;
@@ -145,13 +141,19 @@ footer {
     }
     .btn-hamburger {
       justify-content: flex-end;
-      color: #86817f;
       text-transform: uppercase;
       font-weight: 500;
       letter-spacing: 0.1em;
       display: none;
       visibility: hidden;
       opacity: 0;
+    }
+    .menu {
+      // display: block;
+      display: flex;
+      opacity: 1;
+      visibility: visible;
+      color: #6a2727;
     }
     ul {
       display: flex;
