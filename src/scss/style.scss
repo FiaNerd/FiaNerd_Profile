@@ -2,6 +2,7 @@ $font-stack: Poppins, sans-serif;
 $headline-stack: Playfair Display, serif;
 $primary-color: #2d2d2d;
 $secondery-color: #000000;
+$golden-color: #a28950;
 $font-color: #ededed;
 
 *,
@@ -53,8 +54,8 @@ header {
   top: 0;
 }
 .cover-header {
-  height: 7em;
-  color: rgb(255, 255, 255);
+  height: 6em;
+  color: rgb(167, 18, 18);
   background-color: #ffffff;
   .sticky-header {
     font-size: 1.4rem;
@@ -80,9 +81,10 @@ header {
     border: none;
     cursor: pointer;
     font-size: 1.2rem;
-    color: #a28950;
+    color: $golden-color;
     font-size: 2rem;
     justify-content: flex-end;
+    margin-bottom: 0.5em;
   }
   .menu {
     text-align: end;
@@ -99,7 +101,6 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 0;
   }
   ul li a {
     line-height: 1.5em;
@@ -107,10 +108,7 @@ header {
     font-size: 1.2rem;
   }
   ul li a:hover {
-    color: #a28950;
-  }
-  .dropdown-menu a {
-    margin-left: 1.4em;
+    color: $golden-color;
   }
 }
 main {
@@ -122,7 +120,6 @@ main {
   z-index: -2;
 }
 .hero-container {
-  position: relative;
   background: url(/src/img/mobile/hero-img-mobile.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -130,62 +127,59 @@ main {
   width: 100%;
   height: 100%;
   z-index: -1;
-  // background-attachment: fixed;
+  background-attachment: fixed;
+
+  .hero-design,
+  .hero-photoshop,
+  .hero-illustrator,
+  .hero-indesign,
+  .hero-and {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
 }
+
 footer {
   position: sticky;
   background-color: $secondery-color;
   bottom: 0;
   text-align: center;
-  color: rgb(146, 120, 84);
+  color: #927854;
 }
 
 @media only screen and (min-width: 479px) {
+}
+@media only screen and (min-width: 699px) {
   .navbar {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: baseline;
+    justify-content: space-around;
     .logo {
-      color: $font-color;
-      font-family: $headline-stack;
-      text-align: center;
-      margin-bottom: 0.5em;
+      margin: 0.5em 0;
     }
     .btn-hamburger {
-      justify-content: flex-end;
-      text-transform: uppercase;
-      font-weight: 500;
-      letter-spacing: 0.1em;
       display: none;
       visibility: hidden;
       opacity: 0;
     }
     .menu {
-      // display: block;
       display: flex;
       opacity: 1;
       visibility: visible;
-      color: #6a2727;
     }
     ul {
-      display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      gap: 3em;
     }
     ul li {
-      font-size: 1.2rem;
+      font-size: 1.9rem;
       display: inline-block;
       position: relative;
       text-align: left;
     }
-    ul li a {
-      display: block;
-      padding: 8px 25px;
-      color: rgb(219, 219, 219);
-    }
     .dropdown-menu {
-      min-width: 100%;
       display: none;
       position: absolute;
       // z-index: 999;
@@ -198,100 +192,49 @@ footer {
       display: block;
     }
   }
+  .hero-container {
+    background: url(/src/img/desktop/hero_profile.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+  }
+}
+@media only screen and (min-width: 767px) {
+  .hero-container {
+    display: flex;
+    margin: 0 1em;
 
-  @media screen and (min-width: 479px) {
-    .hero-container {
-      position: relative;
-      background: url(/src/img/desktop/hero-img.png);
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background-attachment: fixed;
-      .hero-text-left-side {
-        position: absolute;
-        // -webkit-transform: rotate(-5deg);
-        // -moz-transform: rotate(-55eg);
-        // -ms-transform: rotate(-5deg);
-        // -o-transform: rotate(-5deg);
+    .hero-text-left-side {
+      margin-top: 10em;
+      flex-wrap: wrap;
+      letter-spacing: 1.2em;
+      text-align: center;
+      .hero-design {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
       }
       .hero-design {
+        flex-direction: column;
+        justify-content: center;
         font-family: $headline-stack;
-        color: #a28950;
-        font-size: 3.5rem;
-      }
-      .hero-photoshop {
-        font-family: $headline-stack;
-        color: #a28950;
-        font-size: 2.5rem;
-      }
-      .hero-illustrator {
-        font-family: $headline-stack;
-        color: #a28950;
-        font-size: 2.5rem;
-      }
-      .hero-indesign {
-        font-family: $headline-stack;
-        color: #a28950;
-        font-size: 2.5rem;
-      }
-    }
-
-    @media only screen and (min-width: 768px) {
-      .hero-text-left-side {
-        position: absolute;
-        // top: 4.3em;
-        line-height: 8em;
-        // top: 36%;
-        // left: 18%;
-        // transform: translate(-50%, -50%);
-        letter-spacing: 1.4em;
-        text-align: center;
-        // -webkit-transform: rotate(-5deg);
-        // -moz-transform: rotate(-55eg);
-        // -ms-transform: rotate(-5deg);
-        // -o-transform: rotate(-5deg);
-      }
-      .hero-design {
-        font-family: $headline-stack;
-        color: #a28950;
-        font-size: 4rem;
-        margin-top: 15%;
-        margin-left: 12%;
-        // top: 70%;
-        // left: 60%;
-        // transform: translate(-49%, -50%);
-        // margin-left: 3.5em;
-      }
-      .hero-photoshop {
-        font-family: $headline-stack;
-        color: #a28950;
-        font-size: 2.5rem;
-        -webkit-transform: rotate(-5deg);
-      }
-      .hero-illustrator {
-        font-family: $headline-stack;
-        color: #a28950;
-        font-size: 2.5rem;
-        margin-top: 2rem;
-        -webkit-transform: rotate(5deg);
-      }
-      .hero-indesign {
-        font-family: $headline-stack;
-        color: #a28950;
-        font-size: 2.5rem;
-        -webkit-transform: rotate(-8deg);
+        color: $golden-color;
+        font-size: 3.6rem;
+        transform: rotate(-20deg);
       }
     }
   }
   .hero-and {
-    position: absolute;
-    color: #a28950;
+    color: $golden-color;
     top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 6em;
   }
+}
+
+@media screen and (min-width: 1023px) {
 }
