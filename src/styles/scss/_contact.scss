@@ -1,0 +1,123 @@
+// .form-container {
+//   display: grid;
+//   grid-template-rows: 1fr 1fr;
+//   margin: 9% auto;
+//   width: 80%;
+//   box-shadow: 0 5px 8px 0 rgba(147, 147, 147, 0.2),
+//     0 7px 20px 0 rgba(234, 234, 234, 0.2);
+//   position: relative;
+//   border-radius: 3px;
+//   min-height: 70%;
+//   background-color: rgb(105, 130, 130);
+//   height: auto;
+//   form {
+//     display: grid;
+//     grid-template-rows: 1fr 1fr 1fr 1fr;
+//     width: 70%;
+//     height: 2em;
+//   }
+// }
+
+// .form-container {
+//   display: grid;
+//   grid-template-rows: 1fr 1fr 1fr 1fr;
+//   width: 80%;
+
+//   form {
+//     display: grid;
+//     gap: 0.5em;
+//   }
+//   label {
+//     color: #fff;
+//   }
+// }
+
+// .form-container {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   background-color: antiquewhite;
+//   width: 80%;
+//   margin: 0 auto;
+//   border-radius: 0.4em;
+//   gap: 5em;
+//   label {
+//     display: flex;
+//     gap: 3em;
+//     color: rgb(181, 118, 40);
+//   }
+//   form {
+//     // width: 50%;
+//     padding: 2em;
+//   }
+//   input {
+//     display: flex;
+//     height: 2em;
+//     width: 100%;
+//   }
+//   textarea {
+//     display: block;
+//     margin: 0 auto;
+//     margin-bottom: 1em;
+//   }
+//   button {
+//     display: flex;
+//     width: 50%;
+//     padding: 0.5em 1em;
+//     justify-content: center;
+//     align-items: center;
+//     text-align: center;
+//   }
+// }
+
+$font-stack: Poppins, sans-serif;
+$headline-stack: Playfair Display, serif;
+$primary-color: #2d2d2d;
+$secondery-color: #0f0d0d;
+$golden-color: #a28950;
+$font-color: #ededed;
+
+.form-container {
+  display: grid;
+  grid-template-rows: 10% auto;
+  width: 80%;
+  margin: 3em auto;
+  .text-contact {
+    color: aliceblue;
+  }
+  form {
+    display: grid;
+    gap: 1em;
+  }
+  .form-input {
+    display: grid;
+  }
+  h3 {
+    font-family: $headline-stack;
+    text-align: center;
+    letter-spacing: 0.2em;
+  }
+  label {
+    color: $font-color;
+  }
+  input {
+    height: 2.5em;
+    border-radius: 0.3em;
+    border: 1px solid $golden-color;
+    padding-left: 0.6em;
+  }
+  textarea {
+    border-radius: 0.3em;
+  }
+  button {
+    background-color: black;
+    border: 2px solid $golden-color;
+    border-radius: 0.7em;
+    color: rgb(255, 255, 255);
+    padding: 0.8em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+  }
+}
