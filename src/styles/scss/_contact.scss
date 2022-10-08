@@ -79,9 +79,9 @@ $font-color: #ededed;
 
 .form-container {
   display: grid;
-  grid-template-rows: 20% auto;
+  grid-template-rows: 10% auto;
   width: 80%;
-  margin: 0 auto;
+  margin: 3em auto;
   .text-contact {
     color: aliceblue;
   }
@@ -92,13 +92,22 @@ $font-color: #ededed;
   .form-input {
     display: grid;
   }
+  h3 {
+    font-family: $headline-stack;
+    text-align: center;
+    letter-spacing: 0.2em;
+  }
   label {
-    color: aliceblue;
+    color: $font-color;
   }
   input {
     height: 2.5em;
     border-radius: 0.3em;
     border: 1px solid $golden-color;
+    padding-left: 0.6em;
+  }
+  textarea {
+    border-radius: 0.3em;
   }
   button {
     background-color: black;
