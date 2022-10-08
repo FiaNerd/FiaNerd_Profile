@@ -1,0 +1,38 @@
+$font-stack: Poppins, sans-serif;
+$headline-stack: Playfair Display, serif;
+$primary-color: #2d2d2d;
+$secondery-color: #0f0d0d;
+$golden-color: #a28950;
+$font-color: #ededed;
+
+aside {
+  background-color: antiquewhite;
+  float: none;
+}
+.about-title {
+  font-family: $headline-stack;
+  color: $font-color;
+  text-align: center;
+}
+.about-me-section {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  max-width: 90%;
+  .about-me {
+  }
+  .image-me {
+    width: 20em;
+    object-fit: cover;
+  }
+}
+@media only screen and (min-width: 697px) {
+  aside {
+    float: left;
+  }
+
+  .about-me-section {
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    justify-content: center;
+  }
+}

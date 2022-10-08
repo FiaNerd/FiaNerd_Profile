@@ -1,4 +1,6 @@
 @use "_contact";
+@use "_profile";
+
 $font-stack: Poppins, sans-serif;
 $headline-stack: Playfair Display, serif;
 $primary-color: #2d2d2d;
@@ -87,6 +89,9 @@ header {
     font-family: $headline-stack;
     text-align: center;
     margin-bottom: 0.6em;
+    a {
+      color: $font-color;
+    }
   }
   .btn-hamburger {
     position: relative;
@@ -127,12 +132,12 @@ header {
     color: $golden-color;
   }
 }
-main {
+.main-home {
   flex: 1;
   overflow: auto;
   height: 100%;
   font-size: 1rem;
-  background-color: #0f0d0d;
+  // background-color: #0f0d0d;
 }
 .hero-container {
   display: flex;
@@ -164,9 +169,9 @@ main {
     font-size: 1.2em;
     color: $font-color;
   }
-  span {
+  .info-text {
     color: $font-color;
-    margin-bottom: 20em;
+    padding: 1em 1em;
   }
 }
 
@@ -178,7 +183,7 @@ footer {
   color: #927854;
 }
 .footer-icon-container,
-p {
+span {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -199,9 +204,9 @@ p {
   margin-bottom: 0.5em;
 }
 
-@media only screen and (min-width: 479px) {
+@media screen and (min-width: 479px) {
 }
-@media only screen and (min-width: 699px) {
+@media screen and (min-width: 697px) {
   .cover-header {
     .cover-text {
       font-size: 3rem;
@@ -263,8 +268,6 @@ p {
   }
 }
 @media only screen and (min-width: 767px) {
-  .cover-header {
-  }
   .hero-container {
     display: flex;
     .hero-text-left-side {
