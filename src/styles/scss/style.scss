@@ -40,6 +40,27 @@ li {
 a {
   text-decoration: none;
 }
+.cover-header {
+  display: flex;
+  justify-content: center;
+  background-image: url(/src/img/banner_sticky.jpg);
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 6em;
+  background-color: #ffffff;
+  .cover-text {
+    text-align: center;
+    align-items: center;
+    font-family: $headline-stack;
+    color: $golden-color;
+    letter-spacing: 0.1rem;
+    font-size: 1.4rem;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 1px;
+  }
+}
 .wrapper {
   display: grid;
   height: 100%;
@@ -55,14 +76,7 @@ header {
   top: 0;
   z-index: 1;
 }
-.cover-header {
-  height: 6em;
-  color: rgb(167, 18, 18);
-  background-color: #ffffff;
-  .sticky-header {
-    font-size: 1.4rem;
-  }
-}
+
 .navbar {
   display: flex;
   flex-direction: column;
@@ -188,6 +202,12 @@ p {
 @media only screen and (min-width: 479px) {
 }
 @media only screen and (min-width: 699px) {
+  .cover-header {
+    .cover-text {
+      font-size: 3rem;
+      line-height: 0.9em;
+    }
+  }
   .navbar {
     display: flex;
     flex-direction: row;
@@ -195,6 +215,9 @@ p {
     justify-content: space-around;
     .logo {
       margin: 0.5em 0;
+      a {
+        color: $font-color;
+      }
     }
     .btn-hamburger {
       display: none;
@@ -240,6 +263,8 @@ p {
   }
 }
 @media only screen and (min-width: 767px) {
+  .cover-header {
+  }
   .hero-container {
     display: flex;
     .hero-text-left-side {
