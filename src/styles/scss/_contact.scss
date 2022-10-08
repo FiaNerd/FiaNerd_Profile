@@ -92,7 +92,7 @@ $font-color: #ededed;
   .form-input {
     display: grid;
   }
-  h3 {
+  h2 {
     font-family: $headline-stack;
     text-align: center;
     letter-spacing: 0.2em;
@@ -107,7 +107,9 @@ $font-color: #ededed;
     padding-left: 0.6em;
   }
   textarea {
+    color: #2d2d2d;
     border-radius: 0.3em;
+    margin-bottom: 1.7em;
   }
   button {
     background-color: black;
@@ -119,5 +121,26 @@ $font-color: #ededed;
     text-decoration: none;
     display: inline-block;
     font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  button:hover {
+    color: $secondery-color;
+    background-color: $golden-color;
+  }
+}
+
+@media screen and (min-width: 479px) {
+  .form-container {
+    max-width: 40em;
+    margin-top: 8em;
+  }
+}
+@media screen and (min-width: 767px) {
+  .form-container {
+    max-width: 40em;
+    input {
+      height: 3em;
+    }
   }
 }

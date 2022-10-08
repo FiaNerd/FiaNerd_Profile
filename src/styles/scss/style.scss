@@ -163,26 +163,22 @@ footer {
   text-align: center;
   color: #927854;
 }
-.contact {
-  font-size: 1rem;
-  margin-bottom: 0.5em;
-  margin-top: 0.7em;
-}
-.footer-icon-container {
+.footer-icon-container,
+p {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 5em;
-  margin-bottom: 1em;
+  margin: 0.5em 0;
   .fa-github,
   .fa-linkedin,
   .fa-envelope {
-    font-size: 1.4rem;
+    font-size: 1.9rem;
     color: $font-color;
-  }
-  h3 {
-    text-align: center;
-    font-size: 1rem;
+    p {
+      text-align: center;
+      font-size: 0.9rem;
+    }
   }
 }
 .copy {
