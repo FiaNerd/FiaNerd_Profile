@@ -25,17 +25,112 @@ aside {
   // max-width: 90%;
   .about-title {
     font-family: $headline-stack;
+    text-transform: uppercase;
     color: $font-color;
     text-align: center;
   }
-  .about-me {
+  .about-text {
+    color: $font-color;
   }
   .image-me {
     width: 100%;
     object-fit: cover;
   }
+  .right-now-title {
+    color: $font-color;
+    .right-now-tetx {
+      color: $font-color;
+    }
+  }
+}
+.right-now-title {
+  font-family: $headline-stack;
+  text-transform: uppercase;
+  color: $font-color;
+}
+.right-now-text {
+  color: $font-color;
+}
+.studied-section {
+  // float: right;
+  .info-section {
+    display: grid;
+    // grid-template-rows: 1fr 1fr;
+    float: right;
+  }
+  .studied-title {
+    font-family: $headline-stack;
+    text-transform: uppercase;
+    float: right;
+    font-size: 2rem;
+    color: $golden-color;
+  }
 }
 @media only screen and (min-width: 697px) {
+  .main-profile {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 90%;
+    margin: 0 auto;
+    gap: 4em;
+  }
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    // float: right;
+  }
+  aside {
+    // display: flex;
+    // flex-direction: column;
+    // float: left;
+    // max-width: 50em;
+    // height: 100%;
+  }
+
+  .about-me-section {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    // float: right;
+    gap: 2em;
+    padding: 2em 0;
+    .about-title {
+      font-family: $headline-stack;
+      color: $font-color;
+      text-align: center;
+    }
+    .about-me {
+    }
+    .image-me {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .right-now-section {
+    display: grid;
+    grid-template-columns: 15% 65%;
+    gap: 1em;
+    .right-now-container {
+      // width: 60%;
+    }
+    .right-now-title {
+      rotate: 90deg;
+    }
+  }
+  .studied-section {
+    // float: right;
+    .info-section {
+      display: grid;
+      // grid-template-rows: 1fr 1fr;
+      float: right;
+    }
+    .studied-title {
+      float: right;
+    }
+  }
+}
+
+@media only screen and (min-width: 1023px) {
   .main-profile {
     display: flex;
     flex-direction: row;
@@ -77,7 +172,7 @@ aside {
   }
   .right-now-section {
     display: grid;
-    grid-template-columns: 15% 60%;
+    grid-template-columns: 15% 65%;
     gap: 1em;
     .right-now-container {
       // width: 60%;
@@ -95,8 +190,6 @@ aside {
     }
     .studied-title {
       float: right;
-      font-size: 2rem;
-      color: rgb(29, 199, 162);
     }
   }
 }
