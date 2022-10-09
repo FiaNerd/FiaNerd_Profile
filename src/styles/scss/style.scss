@@ -45,6 +45,7 @@ a {
 .cover-header {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-image: url(/src/img/banner_sticky.jpg);
   object-fit: cover;
   background-repeat: no-repeat;
@@ -53,8 +54,6 @@ a {
   height: 6em;
   background-color: #ffffff;
   .cover-text {
-    text-align: center;
-    align-items: center;
     font-family: $headline-stack;
     color: $golden-color;
     letter-spacing: 0.1rem;
