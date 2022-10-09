@@ -6,18 +6,27 @@ $golden-color: #a28950;
 $font-color: #ededed;
 
 aside {
+  position: relative;
+  display: block;
   background-color: antiquewhite;
   float: none;
+  padding: 1em 5%;
 }
-.about-title {
-  font-family: $headline-stack;
-  color: $font-color;
-  text-align: center;
+.main-profile {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column-reverse;
 }
 .about-me-section {
-  display: grid;
-  grid-template-rows: 1fr auto;
-  max-width: 90%;
+  // display: grid;
+  // grid-template-rows: 1fr auto;
+  // max-width: 90%;
+  .about-title {
+    font-family: $headline-stack;
+    color: $font-color;
+    text-align: center;
+  }
   .about-me {
   }
   .image-me {
@@ -26,13 +35,55 @@ aside {
   }
 }
 @media only screen and (min-width: 697px) {
+  .main-profile {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+    gap: 4em;
+  }
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    float: right;
+  }
   aside {
-    float: left;
+    display: flex;
+    flex-direction: column;
+    // float: left;
+    max-width: 45%;
+    height: 100%;
+    padding: 2em 2.5%;
   }
 
   .about-me-section {
     display: grid;
-    grid-template-columns: repeat(2, 40%);
-    justify-content: center;
+    grid-template-columns: 40% 1fr;
+    // float: right;
+    gap: 2em;
+    padding: 2em 0;
+    .about-title {
+      font-family: $headline-stack;
+      color: $font-color;
+      text-align: center;
+    }
+    .about-me {
+    }
+    .image-me {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .studied-section {
+    float: right;
+    .info-section {
+      display: grid;
+      grid-template-rows: 2fr 2fr;
+      float: right;
+    }
+    .studied-title {
+      font-size: 2rem;
+      color: rgb(29, 199, 162);
+    }
   }
 }

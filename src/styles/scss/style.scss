@@ -182,22 +182,22 @@ footer {
   text-align: center;
   color: #927854;
 }
-.footer-icon-container,
-span {
+.footer-icon-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 5em;
-  margin: 0.5em 0;
+  margin: 0.8em 0;
   .fa-github,
   .fa-linkedin,
   .fa-envelope {
-    font-size: 1.9rem;
+    font-size: 1.2rem;
     color: $font-color;
-    p {
-      text-align: center;
-      font-size: 0.9rem;
-    }
+  }
+  .footer-icon-text {
+    color: $font-color;
+    text-align: center;
+    font-size: 1rem;
   }
 }
 .copy {
