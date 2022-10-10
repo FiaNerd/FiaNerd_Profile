@@ -58,13 +58,13 @@ $font-color: #ededed;
   }
 }
 
-@media screen and (min-width: 479px) {
+@media only screen and (min-width: 479px) {
   .form-container {
     max-width: 40em;
     margin-top: 8em;
   }
 }
-@media screen and (min-width: 767px) {
+@media only screen and (min-width: 767px) {
   .form-container {
     max-width: 40em;
     input {
