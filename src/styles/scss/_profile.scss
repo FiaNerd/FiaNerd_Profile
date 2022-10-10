@@ -7,9 +7,24 @@ $font-color: #ededed;
 
 aside {
   width: inherit;
-  background-color: antiquewhite;
+  border: 2px solid $font-color;
   float: none;
   padding: 1em 2.5%;
+  .aside-skills-title {
+    font-family: $headline-stack;
+    color: $golden-color;
+    font-size: 1.5rem;
+    margin-bottom: 0.2em;
+  }
+}
+.aside-program-container {
+  .aside-program-sub-title {
+    font-family: $headline-stack;
+    color: $font-color;
+  }
+  p {
+    color: $font-color;
+  }
 }
 .main-profile {
   width: 100%;
@@ -18,59 +33,79 @@ aside {
   flex-direction: column-reverse;
   padding: 2em 5%;
 }
-// .about-me-section {
-// display: grid;
-// grid-template-rows: 1fr auto;
-// max-width: 90%;
-.about-title {
-  font-family: $headline-stack;
-  font-size: 2rem;
-  text-transform: uppercase;
-  color: $golden-color;
-  text-align: start;
-  margin: 1em 0 0.5em 0;
+.image-profile-container {
+  // width: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.image-profile {
+  width: 100%;
+}
+.text-image-container {
+  position: absolute;
+  left: 64%;
+  top: 20%;
+
+  .about-title {
+    font-family: $headline-stack;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    color: $golden-color;
+    .ut-title {
+      margin-top: -0.6em;
+      margin-bottom: -0.6em;
+      font-size: 2rem;
+      display: block;
+      margin-left: 2em;
+    }
+    .me-title {
+      font-size: 3rem;
+      display: block;
+    }
+  }
 }
 .about-text {
   color: $font-color;
 }
-.image-me {
-  width: 100%;
-  object-fit: cover;
-}
-// }
+
 .right-now-title {
   text-align: end;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-family: $headline-stack;
   color: $golden-color;
   text-transform: uppercase;
-  margin: 1em 0 0.5em 0;
+  margin: 1em 0 0.2em 0;
 }
 .right-now-text {
   color: $font-color;
 }
 
-// .studied-section {
-//   // float: right;
-//   .studied-text-container {
-//     .info-section {
-// display: grid;
-// grid-template-rows: 1fr 1fr;
-// float: right;ª
-// }
+.studied-section {
+  // margin-bottom: 2em;
+  .studied-title {
+    text-align: start;
+    margin: 1em 0 0.2em 0;
+    font-family: $headline-stack;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    color: $golden-color;
+  }
+  .studied-text {
+    color: $font-color;
+  }
+  .studied-year {
+    color: $font-color;
+  }
+}
 
-.studied-title {
-  text-align: start;
-  margin: 1em 0 0.5em 0;
+.work-title {
   font-family: $headline-stack;
   text-transform: uppercase;
-  font-size: 2rem;
+  text-align: end;
+  margin: 1em 0 0.2em 0;
   color: $golden-color;
 }
-.studied-text {
-  color: $font-color;
-}
-.studied-year {
+.work-text {
   color: $font-color;
 }
 //   }
@@ -79,33 +114,20 @@ aside {
   .main-profile {
     display: flex;
     flex-direction: column-reverse;
-    width: 90%;
+    // width: 90%;
     margin: 0 auto;
-    gap: 4em;
   }
   .info-section {
     display: flex;
     flex-direction: column;
-    gap: 3em;
-    // float: right;
+    gap: 4em;
   }
-  aside {
-    // display: flex;
-    // flex-direction: column;
-    // float: left;
-    // max-width: 50em;
-    // height: 100%;
-  }
-
   .about-me-section {
     display: grid;
-    grid-template-columns: 40% 1fr;
-    // float: right;
+    grid-template-columns: 20% 1fr;
     gap: 2em;
-    padding: 2em 0;
     .about-title {
-      font-family: $headline-stack;
-      color: $font-color;
+      font-size: 2rem;
       text-align: center;
     }
     .about-me {
@@ -119,30 +141,27 @@ aside {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    // display: grid;
-    // grid-template-columns: 15% 65%;
-    width: 80%;
-    gap: 4em;
+    max-width: 80%;
+    gap: 1em;
     .right-now-container {
-      // width: 60%;
     }
     .right-now-title {
-      width: inherit;
-      text-align: center;
-      rotate: 90deg;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-size: 2rem;
+      margin: 0;
     }
   }
   .studied-section {
-    // display: grid;
-    // grid-template-rows: 1fr 1fr;
-    // float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .info-section {
-      // display: grid;
-      // grid-template-rows: 1fr 1fr;
-      float: right;
     }
     .studied-title {
-      float: right;
+      font-size: 2rem;
+      text-align: center;
+      margin-top: 0;
     }
   }
 }
@@ -151,7 +170,6 @@ aside {
   .main-profile {
     display: flex;
     flex-direction: row;
-    width: 90%;
     margin: 0 auto;
     gap: 4em;
   }
@@ -177,7 +195,6 @@ aside {
     padding: 2em 0;
     .about-title {
       font-family: $headline-stack;
-      color: $font-color;
       text-align: center;
     }
     .about-me {
@@ -188,25 +205,21 @@ aside {
     }
   }
   .right-now-section {
-    display: grid;
-    grid-template-columns: 15% 65%;
-    column-gap: 1em;
+    gap: 0em;
     .right-now-container {
-      // width: 60%;
     }
     .right-now-title {
-      rotate: 90deg;
+      height: auto;
+      height: fit-content;
+      text-align: inherit;
     }
   }
   .studied-section {
     // float: right;
     .info-section {
       display: grid;
-      // grid-template-rows: 1fr 1fr;
-      float: right;
     }
     .studied-title {
-      float: right;
     }
   }
 }
