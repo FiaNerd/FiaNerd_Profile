@@ -27,24 +27,25 @@ aside {
   }
 }
 .main-profile {
-  width: 100%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column-reverse;
+  width: 100%;
+  margin: 0 auto;
   padding: 2em 5%;
 }
 .image-profile-container {
-  // width: 100%;
+  width: 100%;
   object-fit: cover;
   position: relative;
 }
 .image-profile {
   width: 100%;
+  margin-bottom: 1em;
 }
 .text-image-container {
   position: absolute;
-  left: 64%;
-  top: 20%;
+  left: 65%;
+  top: 30%;
 
   .about-title {
     font-family: $headline-stack;
@@ -52,19 +53,17 @@ aside {
     text-transform: uppercase;
     color: $golden-color;
     .ut-title {
-      margin-top: -0.6em;
-      margin-bottom: -0.6em;
+      margin: -0.6em 0 -0.7em 2em;
       font-size: 2rem;
       display: block;
-      margin-left: 2em;
     }
     .ut-title:before {
       content: "";
       position: absolute;
-      top: 42%;
+      top: 43%;
       left: 0%;
       width: 1.6em;
-      height: 0.25em;
+      height: 0.18em;
       background-color: $golden-color;
       border: 2px solid $golden-color;
     }
@@ -90,23 +89,21 @@ aside {
   color: $font-color;
 }
 
-.studied-section {
-  // margin-bottom: 2em;
-  .studied-title {
-    text-align: start;
-    margin: 1em 0 0.2em 0;
-    font-family: $headline-stack;
-    text-transform: uppercase;
-    font-size: 1.7rem;
-    color: $golden-color;
-  }
-  .studied-text {
-    color: $font-color;
-  }
-  .studied-year {
-    color: $font-color;
-  }
+.studied-title {
+  text-align: start;
+  margin: 1em 0 0.2em 0;
+  font-family: $headline-stack;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  color: $golden-color;
 }
+.studied-text {
+  color: $font-color;
+}
+.studied-year {
+  color: $font-color;
+}
+
 .work-title {
   font-family: $headline-stack;
   text-transform: uppercase;
@@ -120,83 +117,113 @@ aside {
 }
 //   }
 // }
+@media only screen and (min-width: 476px) {
+  .text-image-container {
+    left: 67%;
+    top: 39%;
+    .about-title {
+      font-size: 2.2rem;
+      .ut-title {
+        margin-top: -0.6em;
+        margin-bottom: -0.7em;
+        font-size: 2.4rem;
+        margin-left: 1.8em;
+      }
+      .ut-title:before {
+        top: 43%;
+        left: 0%;
+      }
+      .me-title {
+        font-size: 3.2rem;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 697px) {
   .main-profile {
     display: flex;
     flex-direction: column-reverse;
-    // width: 90%;
     margin: 0 auto;
   }
-  .info-section {
-    display: flex;
-    flex-direction: column;
-    gap: 4em;
-  }
-  .about-me-section {
-    display: grid;
-    grid-template-columns: 20% 1fr;
-    gap: 2em;
+  .text-image-container {
+    left: 67%;
+    top: 40%;
     .about-title {
-      font-size: 2rem;
-      text-align: center;
-    }
-    .about-me {
-    }
-    .image-me {
-      width: 100%;
-      object-fit: cover;
+      font-size: 3rem;
+      .ut-title {
+        margin-left: 1.6em;
+        font-size: 3.2rem;
+      }
+      .ut-title:before {
+        top: 43%;
+        left: 0%;
+        width: 1.4em;
+        height: 0.18em;
+      }
+      .me-title {
+        font-size: 4rem;
+      }
     }
   }
-  .right-now-section {
+  .right-now-title,
+  .studied-title,
+  .work-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media only screen and (min-width: 819px) {
+  .main-profile {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    max-width: 80%;
-    gap: 1em;
-    .right-now-container {
-    }
-    .right-now-title {
-      writing-mode: vertical-rl;
-      text-orientation: mixed;
-      font-size: 2rem;
-      margin: 0;
-    }
+    margin: 0 auto;
+    gap: 3em;
   }
-  .studied-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .info-section {
-    }
-    .studied-title {
-      font-size: 2rem;
-      text-align: center;
-      margin-top: 0;
-    }
+  .text-image-container {
+    left: 63%;
+    top: 32%;
   }
 }
 
 @media only screen and (min-width: 1023px) {
   .main-profile {
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto;
     gap: 4em;
+  }
+  aside {
+    width: 70%;
+  }
+  .text-image-container {
+    left: 54%;
+    top: 3%;
+    .about-title {
+      font-size: 2.2rem;
+      .ut-title {
+        margin-left: 2.8em;
+        font-size: 2rem;
+      }
+      .ut-title:before {
+        top: 43%;
+        left: 24%;
+        width: 1.4em;
+        height: 0.18em;
+      }
+      .me-title {
+        font-size: 3rem;
+      }
+    }
+  }
+  .image-profile {
+    width: 100%;
+    height: 100%;
+    object-position: 25%;
+    object-fit: cover;
   }
   .info-section {
     display: flex;
     flex-direction: column;
     gap: 3em;
-    // float: right;
   }
-  aside {
-    // display: flex;
-    // flex-direction: column;
-    // float: left;
-    // max-width: 50em;
-    // height: 100%;
-  }
-
   .about-me-section {
     display: grid;
     grid-template-columns: 40% 1fr;
@@ -207,29 +234,18 @@ aside {
       font-family: $headline-stack;
       text-align: center;
     }
-    .about-me {
-    }
-    .image-me {
-      width: 100%;
-      object-fit: cover;
-    }
   }
   .right-now-section {
-    gap: 0em;
-    .right-now-container {
-    }
-    .right-now-title {
-      height: auto;
-      height: fit-content;
-      text-align: inherit;
-    }
+    max-width: 80%;
+    margin: 0 0 0 auto;
   }
+
   .studied-section {
-    // float: right;
-    .info-section {
-      display: grid;
-    }
-    .studied-title {
-    }
+    max-width: 80%;
+  }
+  .right-now-title,
+  .studied-title,
+  .work-title {
+    margin: 0;
   }
 }
