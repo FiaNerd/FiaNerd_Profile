@@ -33,7 +33,7 @@
           <div class="menu">
             <ul>
               <li><a href="/src/index.html">Home</a></li>
-              <li><a href="#">Profile</a></li>
+              <li><a href="/src/profile.html">Profile</a></li>
               <li>
                 <a href="#">Portfolio</a>
                 <ul class="dropdown-menu">
@@ -46,7 +46,7 @@
           </div>
         </nav>
       </header>
-      <main>
+      <main class="main-home">
         <section class="hero-container">
           <ul class="hero-text-left-side">
             <li class="hero-design">Design</li>
@@ -54,7 +54,7 @@
             <li class="hero-illustrator">Illustrator</li>
             <li class="hero-indesign">Indesign</li>
           </ul>
-          <p class="hero-and">&</p>
+          <!-- <p class="hero-and">&</p> -->
           <!-- <ul class="hero-text-right-side">
             <li class="hero-design">Code</li>
             <li class="hero-photoshop">Html&Css</li>
@@ -64,20 +64,29 @@
         </section>
         <section class="short-info">
           <h2 class="info-title">console.log("Hello You"")</h2>
-          <span
-            >My name is Sofia, and I'm styding frontend development att
+          <p class="info-text">
+            My name is Sofia, and I'm styding frontend development att
             Mediainstituet i Malmö. You can read more about me and my skills
             under profile.
-          </span>
+          </p>
         </section>
       </main>
       <footer>
         <div class="footer-icon-container">
-          <i class="fa fa-github"><p>Github</p></i>
-          <i class="fa fa-linkedin"><p>LinkedIn</p></i>
-          <i class="fa fa-envelope"><p>email</p></i>
+          <div>
+            <i class="fa fa-github"></i>
+            <p class="footer-icon-text">Github</p>
+          </div>
+          <div>
+            <i class="fa fa-linkedin"></i>
+            <p class="footer-icon-text">LinkedIn</p>
+          </div>
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p class="footer-icon-text">email</p>
+          </div>
         </div>
-        <p class="copy">&copy Sofia Mattiasson</p>
+        <p class="copy">&copy; Sofia Mattiasson</p>
       </footer>
       <script src="/src/js/menu-btn.js"></script>
     </div>

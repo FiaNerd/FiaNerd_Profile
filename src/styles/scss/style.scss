@@ -1,7 +1,9 @@
 @use "_contact";
+@use "_profile";
+
 $font-stack: Poppins, sans-serif;
 $headline-stack: Playfair Display, serif;
-$primary-color: #2d2d2d;
+$primary-color: #151010;
 $secondery-color: #0f0d0d;
 $golden-color: #a28950;
 $font-color: #ededed;
@@ -43,6 +45,7 @@ a {
 .cover-header {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-image: url(/src/img/banner_sticky.jpg);
   object-fit: cover;
   background-repeat: no-repeat;
@@ -51,8 +54,6 @@ a {
   height: 6em;
   background-color: #ffffff;
   .cover-text {
-    text-align: center;
-    align-items: center;
     font-family: $headline-stack;
     color: $golden-color;
     letter-spacing: 0.1rem;
@@ -82,11 +83,15 @@ header {
   flex-direction: column;
   padding: 0 0.8em;
   top: 0;
+  margin-bottom: 2em;
   .logo {
     color: $font-color;
     font-family: $headline-stack;
     text-align: center;
     margin-bottom: 0.6em;
+    a {
+      color: $font-color;
+    }
   }
   .btn-hamburger {
     position: relative;
@@ -127,12 +132,12 @@ header {
     color: $golden-color;
   }
 }
-main {
+.main-home {
   flex: 1;
   overflow: auto;
   height: 100%;
   font-size: 1rem;
-  background-color: #0f0d0d;
+  // background-color: #0f0d0d;
 }
 .hero-container {
   display: flex;
@@ -156,17 +161,18 @@ main {
   }
 }
 .short-info {
-  font-family: $headline-stack;
   background-color: $secondery-color;
   text-align: center;
   .info-title {
-    padding: 1.5em;
-    font-size: 1.2em;
+    font-family: $headline-stack;
+    padding: 1.5em 0 0 0.8em;
+    font-size: 1.4em;
     color: $font-color;
   }
-  span {
+  .info-text {
+    font-family: $font-stack;
     color: $font-color;
-    margin-bottom: 20em;
+    padding: 1em;
   }
 }
 
@@ -177,22 +183,22 @@ footer {
   text-align: center;
   color: #927854;
 }
-.footer-icon-container,
-p {
+.footer-icon-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 5em;
-  margin: 0.5em 0;
+  margin: 0.8em 0;
   .fa-github,
   .fa-linkedin,
   .fa-envelope {
-    font-size: 1.9rem;
+    font-size: 1.2rem;
     color: $font-color;
-    p {
-      text-align: center;
-      font-size: 0.9rem;
-    }
+  }
+  .footer-icon-text {
+    color: $font-color;
+    text-align: center;
+    font-size: 1rem;
   }
 }
 .copy {
@@ -201,7 +207,7 @@ p {
 
 @media only screen and (min-width: 479px) {
 }
-@media only screen and (min-width: 699px) {
+@media only screen and (min-width: 697px) {
   .cover-header {
     .cover-text {
       font-size: 3rem;
@@ -253,7 +259,7 @@ p {
     }
   }
   .hero-container {
-    background: url(/src/img/desktop/hero_profile.png);
+    // background: url(/src/img/desktop/hero_profile.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -263,8 +269,6 @@ p {
   }
 }
 @media only screen and (min-width: 767px) {
-  .cover-header {
-  }
   .hero-container {
     display: flex;
     .hero-text-left-side {
@@ -296,5 +300,5 @@ p {
   // }
 }
 
-@media screen and (min-width: 1023px) {
+@media only screen and (min-width: 1023px) {
 }
