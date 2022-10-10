@@ -6,8 +6,7 @@ $golden-color: #a28950;
 $font-color: #ededed;
 
 aside {
-  position: relative;
-  display: block;
+  width: inherit;
   background-color: antiquewhite;
   float: none;
   padding: 1em 2.5%;
@@ -19,53 +18,63 @@ aside {
   flex-direction: column-reverse;
   padding: 2em 5%;
 }
-.about-me-section {
-  // display: grid;
-  // grid-template-rows: 1fr auto;
-  // max-width: 90%;
-  .about-title {
-    font-family: $headline-stack;
-    text-transform: uppercase;
-    color: $font-color;
-    text-align: center;
-  }
-  .about-text {
-    color: $font-color;
-  }
-  .image-me {
-    width: 100%;
-    object-fit: cover;
-  }
-  .right-now-title {
-    color: $font-color;
-    .right-now-tetx {
-      color: $font-color;
-    }
-  }
-}
-.right-now-title {
+// .about-me-section {
+// display: grid;
+// grid-template-rows: 1fr auto;
+// max-width: 90%;
+.about-title {
   font-family: $headline-stack;
+  font-size: 2rem;
   text-transform: uppercase;
+  color: $golden-color;
+  text-align: start;
+  margin: 1em 0 0.5em 0;
+}
+.about-text {
   color: $font-color;
+}
+.image-me {
+  width: 100%;
+  object-fit: cover;
+}
+// }
+.right-now-title {
+  text-align: end;
+  font-size: 2rem;
+  font-family: $headline-stack;
+  color: $golden-color;
+  text-transform: uppercase;
+  margin: 1em 0 0.5em 0;
 }
 .right-now-text {
   color: $font-color;
 }
-.studied-section {
-  // float: right;
-  .info-section {
-    display: grid;
-    // grid-template-rows: 1fr 1fr;
-    float: right;
-  }
-  .studied-title {
-    font-family: $headline-stack;
-    text-transform: uppercase;
-    float: right;
-    font-size: 2rem;
-    color: $golden-color;
-  }
+
+// .studied-section {
+//   // float: right;
+//   .studied-text-container {
+//     .info-section {
+// display: grid;
+// grid-template-rows: 1fr 1fr;
+// float: right;ª
+// }
+
+.studied-title {
+  text-align: start;
+  margin: 1em 0 0.5em 0;
+  font-family: $headline-stack;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: $golden-color;
 }
+.studied-text {
+  color: $font-color;
+}
+.studied-year {
+  color: $font-color;
+}
+//   }
+// }
 @media only screen and (min-width: 697px) {
   .main-profile {
     display: flex;
@@ -107,20 +116,28 @@ aside {
     }
   }
   .right-now-section {
-    display: grid;
-    grid-template-columns: 15% 65%;
-    gap: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    // display: grid;
+    // grid-template-columns: 15% 65%;
+    width: 80%;
+    gap: 4em;
     .right-now-container {
       // width: 60%;
     }
     .right-now-title {
+      width: inherit;
+      text-align: center;
       rotate: 90deg;
     }
   }
   .studied-section {
+    // display: grid;
+    // grid-template-rows: 1fr 1fr;
     // float: right;
     .info-section {
-      display: grid;
+      // display: grid;
       // grid-template-rows: 1fr 1fr;
       float: right;
     }
@@ -173,7 +190,7 @@ aside {
   .right-now-section {
     display: grid;
     grid-template-columns: 15% 65%;
-    gap: 1em;
+    column-gap: 1em;
     .right-now-container {
       // width: 60%;
     }
