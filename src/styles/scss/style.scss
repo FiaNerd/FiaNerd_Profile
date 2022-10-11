@@ -194,11 +194,16 @@ footer {
   .fa-envelope {
     font-size: 1.2rem;
     color: $font-color;
+    display: block;
   }
   .footer-icon-text {
     color: $font-color;
     text-align: center;
     font-size: 1rem;
+
+    .link {
+      color: $font-color;
+    }
   }
 }
 .copy {
