@@ -6,13 +6,11 @@ $golden-color: #a28950;
 $font-color: #ededed;
 
 aside {
-  width: inherit;
-  float: none;
   padding: 1em 2.5%;
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    grid-gap: 2em;
+    grid-gap: 3em;
   }
   .aside-skills-title {
     text-align: center;
@@ -272,7 +270,7 @@ aside {
   .about-me-section {
     display: grid;
     grid-template-columns: 40% 1fr;
-    // float: right;
+    float: right;
     gap: 2em;
     padding: 2em 0;
     .about-title {
@@ -288,5 +286,11 @@ aside {
   .studied-title,
   .work-title {
     margin: 0;
+  }
+}
+
+@media only screen and (min-width: 1399px) {
+  .education-section {
+    max-width: 65%;
   }
 }
