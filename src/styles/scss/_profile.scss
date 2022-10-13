@@ -6,25 +6,35 @@ $golden-color: #a28950;
 $font-color: #ededed;
 
 aside {
-  width: inherit;
-  border: 2px solid $font-color;
-  float: none;
   padding: 1em 2.5%;
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 3em;
+  }
   .aside-skills-title {
+    text-align: center;
     font-family: $headline-stack;
     color: $golden-color;
     font-size: 1.5rem;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.4em;
   }
 }
 .aside-program-container {
-  .aside-program-sub-title {
+  border: 2px solid $font-color;
+  padding: 1em;
+  h3 {
     font-family: $headline-stack;
-    color: $font-color;
+    color: $golden-color;
+    text-align: center;
+    margin-bottom: 0.2em;
   }
   p {
     color: $font-color;
   }
+}
+.language-title {
+  color: #ededed;
 }
 .main-profile {
   display: flex;
@@ -32,6 +42,23 @@ aside {
   width: 100%;
   margin: 0 auto;
   padding: 2em 5%;
+  span {
+    display: block;
+  }
+}
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  margin-bottom: 2em;
+  p {
+    color: $font-color;
+  }
+  .studied-year {
+    text-align: start;
+    margin-bottom: 0.2em;
+    color: $golden-color;
+  }
 }
 .image-profile-container {
   width: 100%;
@@ -73,51 +100,44 @@ aside {
     }
   }
 }
-.about-text {
-  color: $font-color;
-}
 
-.right-now-title {
-  text-align: end;
-  font-size: 1.7rem;
+.main-section-title {
+  font-size: 1.5rem;
   font-family: $headline-stack;
   color: $golden-color;
   text-transform: uppercase;
-  margin: 1em 0 0.2em 0;
+  margin-bottom: 0.3em;
 }
-.right-now-text {
-  color: $font-color;
-}
-
-.studied-title {
-  text-align: start;
-  margin: 1em 0 0.2em 0;
-  font-family: $headline-stack;
-  text-transform: uppercase;
-  font-size: 1.7rem;
-  color: $golden-color;
-}
-.studied-text {
-  color: $font-color;
-}
-.studied-year {
-  color: $font-color;
-}
-
+.right-now-title,
 .work-title {
+  text-align: start;
+}
+.education-title,
+.side-project-title {
+  text-align: end;
+}
+.education-section {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.education-sub-title {
   font-family: $headline-stack;
-  text-transform: uppercase;
-  font-size: 1.7rem;
-  text-align: center;
-  margin: 1em 0 0.2em 0;
   color: $golden-color;
 }
-.work-text {
-  color: $font-color;
+.education-text {
+  margin-bottom: 1em;
 }
-//   }
-// }
+
 @media only screen and (min-width: 476px) {
+  .education-section {
+    max-width: 80%;
+    margin: 0 auto;
+    border: 2px solid #ededed;
+    padding: 0.2em 2em;
+    .education-title {
+      text-align: center;
+    }
+  }
   .text-image-container {
     left: 67%;
     top: 39%;
@@ -166,9 +186,20 @@ aside {
       }
     }
   }
+  .right-now-section,
+  .education-section,
+  .work-section,
+  .side-project-section {
+    max-width: 80%;
+    margin: auto;
+  }
+  .side-project-section {
+    align-items: center;
+  }
   .right-now-title,
-  .studied-title,
-  .work-title {
+  .education-title,
+  .work-title,
+  .side-project-title {
     font-size: 2.2rem;
   }
 }
@@ -183,6 +214,18 @@ aside {
   .text-image-container {
     left: 63%;
     top: 32%;
+  }
+  aside {
+    .skills-grid {
+      grid-template-columns: repeat(1, auto);
+    }
+  }
+  .right-now-section,
+  .education-section,
+  .work-section,
+  .side-project-section {
+    width: 100%;
+    margin: auto;
   }
 }
 
@@ -227,17 +270,13 @@ aside {
   .about-me-section {
     display: grid;
     grid-template-columns: 40% 1fr;
-    // float: right;
+    float: right;
     gap: 2em;
     padding: 2em 0;
     .about-title {
       font-family: $headline-stack;
       text-align: center;
     }
-  }
-  .right-now-section {
-    max-width: 80%;
-    margin: 0 0 0 auto;
   }
 
   .studied-section {
@@ -247,5 +286,11 @@ aside {
   .studied-title,
   .work-title {
     margin: 0;
+  }
+}
+
+@media only screen and (min-width: 1399px) {
+  .education-section {
+    max-width: 65%;
   }
 }
