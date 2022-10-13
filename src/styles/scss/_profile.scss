@@ -7,7 +7,6 @@ $font-color: #ededed;
 
 aside {
   width: inherit;
-  // border: 2px solid $font-color;
   float: none;
   padding: 1em 2.5%;
   .skills-grid {
@@ -50,6 +49,10 @@ aside {
   }
 }
 .info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  margin-bottom: 2em;
   p {
     color: $font-color;
   }
@@ -99,14 +102,7 @@ aside {
     }
   }
 }
-// .about-text {
-//   color: $font-color;
-// }
-.info-section {
-  display: flex;
-  flex-direction: column;
-  gap: 3em;
-}
+
 .main-section-title {
   font-size: 1.5rem;
   font-family: $headline-stack;
@@ -122,12 +118,13 @@ aside {
 .side-project-title {
   text-align: end;
 }
+.education-section {
+  max-width: 80%;
+  margin: 0 auto;
+}
 .education-sub-title {
   font-family: $headline-stack;
   color: $golden-color;
-}
-.studied-text {
-  margin-bottom: 1.5em;
 }
 .education-text {
   margin-bottom: 1em;
@@ -135,10 +132,13 @@ aside {
 
 @media only screen and (min-width: 476px) {
   .education-section {
-    width: 80%;
+    max-width: 80%;
     margin: 0 auto;
     border: 2px solid #ededed;
     padding: 0.2em 2em;
+    .education-title {
+      text-align: center;
+    }
   }
   .text-image-container {
     left: 67%;
@@ -188,9 +188,20 @@ aside {
       }
     }
   }
+  .right-now-section,
+  .education-section,
+  .work-section,
+  .side-project-section {
+    max-width: 80%;
+    margin: auto;
+  }
+  .side-project-section {
+    align-items: center;
+  }
   .right-now-title,
-  .studied-title,
-  .work-title {
+  .education-title,
+  .work-title,
+  .side-project-title {
     font-size: 2.2rem;
   }
 }
@@ -210,6 +221,13 @@ aside {
     .skills-grid {
       grid-template-columns: repeat(1, auto);
     }
+  }
+  .right-now-section,
+  .education-section,
+  .work-section,
+  .side-project-section {
+    width: 100%;
+    margin: auto;
   }
 }
 
@@ -261,10 +279,6 @@ aside {
       font-family: $headline-stack;
       text-align: center;
     }
-  }
-  .right-now-section {
-    max-width: 80%;
-    margin: 0 0 0 auto;
   }
 
   .studied-section {
