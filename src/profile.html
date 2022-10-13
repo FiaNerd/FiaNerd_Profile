@@ -14,7 +14,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="/src/styles/css/style.css" />
+    <link rel="stylesheet" href="./styles/css/style.css" />
 
     <title>Sofia | Profile</title>
   </head>
@@ -26,14 +26,14 @@
     <div class="wrapper">
       <header>
         <nav class="navbar">
-          <h1 class="logo"><a href="/src/index.html">Sofia Mattiasson</a></h1>
+          <h1 class="logo"><a href="./index.html">Sofia Mattiasson</a></h1>
           <button class="btn-hamburger" id="btn-menu">
             <i class="fa fa-bars"></i>
           </button>
           <div class="menu">
             <ul>
-              <li><a href="/src/index.html">Home</a></li>
-              <li><a href="/src/profile.html">Profile</a></li>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./profile.html">Profile</a></li>
               <li>
                 <a href="#">Portfolio</a>
                 <ul class="dropdown-menu">
@@ -41,7 +41,7 @@
                   <li><a href="#">Design</a></li>
                 </ul>
               </li>
-              <li><a href="/src/contact.html">Contact</a></li>
+              <li><a href="./contact.html">Contact</a></li>
             </ul>
           </div>
         </nav>
@@ -49,20 +49,31 @@
       <main class="main-profile">
         <aside class="sidebar">
           <h2 class="aside-skills-title">Skills</h2>
-          <div class="aside-program-container">
-            <h3 class="aside-program-sub-title">Program</h3>
-            <p>vs Studio</p>
-            <p>vs code</p>
-            <p>Git & GitHub</p>
-            <p>Sql Server</p>
-            <p>Photoshop</p>
-            <p>Illustrator</p>
-            <p>Indesign</p>
-          </div>
-          <div class="aside-program">
-            <h3 class="language-title">Language</h3>
-            <p>C#</p>
-            <p>HTML & CSS</p>
+          <div class="skills-grid">
+            <div class="aside-program-container">
+              <h3 class="aside-main-title">Program</h3>
+              <p>vs Studio</p>
+              <p>vs code</p>
+              <p>Git & GitHub</p>
+              <p>Sql Server</p>
+              <p>Photoshop</p>
+              <p>Illustrator</p>
+              <p>Indesign</p>
+            </div>
+            <div class="aside-program-container">
+              <h3>Development</h3>
+              <p>C#</p>
+              <p>HTML & CSS</p>
+            </div>
+            <div class="aside-program-container">
+              <h3>Language</h3>
+              <p>Swedish</p>
+              <p>English</p>
+            </div>
+            <div class="aside-program-container">
+              <h3>Other</h3>
+              <p>Driving license</p>
+            </div>
           </div>
         </aside>
         <div class="info-section">
@@ -76,7 +87,7 @@
               </div>
               <img
                 class="image-profile"
-                src="/src/img/Sofia_profile_img.jpg"
+                src="./img/Sofia_profile_img.jpg"
                 alt="Image Sofia"
               />
             </div>
@@ -88,44 +99,84 @@
                   felt that I've done my bit at the print company. Needed more
                   development than there was room for. So it was simply time to
                   do something else.
-                </p>
-                <p>
-                  In my spare time I do graphic design, which I have also done
-                  for a very long time. Then I became more and more interested
-                  in computers, specifically websites , so I applied for web
-                  development, concentrating on the backend, but also a little
-                  frontend.
+                  <span>
+                    In my spare time I do graphic design, which I have also done
+                    for a very long time. Then I became more and more interested
+                    in computers, specifically websites , so I applied for web
+                    development, concentrating on the backend, but also a little
+                    frontend.
+                  </span>
                 </p>
               </div>
             </div>
           </section>
           <section class="right-now-section">
-            <h2 class="right-now-title">Right now</h2>
+            <h2 class="main-section-title right-now-title">Right now</h2>
             <div class="right-now-container">
               <p class="right-now-text">
                 Right now I'm studying frontend development, at the
                 Medieinstitutet, Malmö. It's a lot of fun and gets to use my
                 creative side, which I love.
-              </p>
-              <p class="right-now-text">
-                I have courses like CSS&HTML, JavaScript, advanced Javascript
-                React
+                <span>
+                  <!-- </p>
+              <p class="right-now-text"> -->
+                  I have courses like CSS&HTML, JavaScript, advanced Javascript
+                  React studied
+                </span>
               </p>
             </div>
           </section>
-          <section class="studied-section">
-            <h2 class="studied-title">Studied</h2>
+          <section class="education-section">
+            <h2 class="main-section-title education-title">Education</h2>
             <!-- <div class="studied-text-container"> -->
-            <p class="studied-text">
-              Webbutveckling inom .NET 2 årig YH-utbildning inom backend / full
-              stack EC Utbildning, Helsingborg
+            <p class="education-year">2020 - 2022</p>
+            <h3 class="education-sub-title">Web development within .NET</h3>
+            <p class="education-text">
+              2 year YH training in frontend
+              <span> Medieinstitutet, Malmö</span>
             </p>
-            <p class="studied-year">2020 - 2022</p>
+            <p class="education-year">2022 - 2024</p>
+            <h3 class="education-sub-title">Frontend developer</h3>
+            <p class="education-text">
+              2 year YH training in frontend
+              <span> EC Utbildning, Helsingborg</span>
+            </p>
+            <p class="education-year">2007 - 2008</p>
+            <h3 class="education-sub-title">Graphic production</h3>
+            <p class="education-text">
+              <span> Rönnowska skolan, Helsingborg</span>
+            </p>
+            <p class="education-year">2005 - 2006</p>
+            <h3 class="education-sub-title">Graphic design</h3>
+
+            <p class="education-text">
+              Graphic technology, idiom and composition, illustration
+              <span>Fridhems Folkhögskola, Svalöv</span>
+            </p>
             <!-- </div> -->
           </section>
           <section class="work-section">
-            <h2 class="work-title">Work experience</h2>
-            <p class="work-text">Printagon Graphics</p>
+            <h2 class="main-section-title work-title">Work experience</h2>
+            <p class="work-text">
+              Lager/Plock/Pack, Yves Rocher 2017
+              <span
+                >Plock och pack via order från internet, timanställning</span
+              >
+              Tryckeri/Bokbinderi/Lager, Printagon Graphics 2013 -
+              Maskinoperatör i bokbinderi. Biträde i tryckeri, bokbinderi/lager,
+              tillsvidare Tryckeri/Bokbinderi, JMS Mediasystem 2008 - 2013
+              Maskinoperatör i bokbinderi, biträde i tryckeri
+            </p>
+          </section>
+          <section class="side-project-section">
+            <h2 class="main-section-title side-project-title">Side project</h2>
+            <p side-project-text>
+              Gnistan Grillbutik, logo 2019 Faunus träd HB, logotype och flyers
+              2010 - Stumpenensemblen, affisch- & programlayout 2008 -
+              Projektarbete: 2006 Huvudproducent för stödfestival Tribut för
+              Hemlösas Hus, Helsingborg på The Tivoli; producent, bokningar,
+              affisch m.m
+            </p>
           </section>
         </div>
       </main>

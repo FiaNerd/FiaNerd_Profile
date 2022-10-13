@@ -1,8 +1,8 @@
-@use "_contact";
-@use "_profile";
+@import "profile";
+@import "contact";
 
 $font-stack: Poppins, sans-serif;
-$headline-stack: Playfair Display, serif;
+$headline-stack: "Playfair Display", serif;
 $primary-color: #151010;
 $secondery-color: #0f0d0d;
 $golden-color: #a28950;
@@ -46,7 +46,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(/src/img/banner_sticky.jpg);
+  background-image: url(../banner_sticky.jpg);
   object-fit: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -83,7 +83,7 @@ header {
   flex-direction: column;
   padding: 0 0.8em;
   top: 0;
-  margin-bottom: 2em;
+
   .logo {
     color: $font-color;
     font-family: $headline-stack;
@@ -112,6 +112,7 @@ header {
     display: none;
     opacity: 0;
     visibility: hidden;
+    margin-bottom: 1em;
   }
   .btn-hamburger.menu-open + .menu {
     display: block;
@@ -141,7 +142,7 @@ header {
 }
 .hero-container {
   display: flex;
-  background: url(/src/img/mobile/hero-img-mobile.png);
+  background-image: url("/src/img/mobile/hero-img-mobile.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -192,14 +193,14 @@ footer {
   .fa-github,
   .fa-linkedin,
   .fa-envelope {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: $font-color;
     display: block;
   }
   .footer-icon-text {
     color: $font-color;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.8rem;
 
     .link {
       color: $font-color;
@@ -210,8 +211,6 @@ footer {
   margin-bottom: 0.5em;
 }
 
-@media only screen and (min-width: 479px) {
-}
 @media only screen and (min-width: 697px) {
   .cover-header {
     .cover-text {
@@ -264,7 +263,6 @@ footer {
     }
   }
   .hero-container {
-    // background: url(/src/img/desktop/hero_profile.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -276,6 +274,7 @@ footer {
 @media only screen and (min-width: 767px) {
   .hero-container {
     display: flex;
+    background-image: url("/src/img/desktop/hero_profile.png");
     .hero-text-left-side {
       margin-top: 10em;
       flex-wrap: wrap;
@@ -296,13 +295,21 @@ footer {
       }
     }
   }
-  // .hero-and {
-  //   color: $golden-color;
-  //   top: 15%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%);
-  //   font-size: 6em;
-  // }
+  .footer-icon-container {
+    gap: 10em;
+    .fa-github,
+    .fa-linkedin,
+    .fa-envelope {
+      font-size: 1.7rem;
+      color: $font-color;
+      display: block;
+    }
+    .footer-icon-text {
+      color: $font-color;
+      text-align: center;
+      font-size: 1rem;
+    }
+  }
 }
 
 @media only screen and (min-width: 1023px) {
