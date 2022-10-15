@@ -59,7 +59,7 @@ a {
     font-family: $headline-stack;
     color: $golden-color;
     letter-spacing: 0.1rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     -webkit-text-fill-color: white;
     -webkit-text-stroke: 1px;
     text-align: center;
@@ -248,7 +248,6 @@ footer {
       font-size: 2rem;
     }
   }
-
   .navbar {
     display: flex;
     flex-direction: row;
@@ -310,7 +309,7 @@ footer {
 @media only screen and (min-width: 767px) {
   .header-banner-container {
     .header-banner-text {
-      font-size: 2.7rem;
+      font-size: 2.3rem;
     }
   }
   .hero-container {
@@ -330,6 +329,17 @@ footer {
       color: $font-color;
       text-align: center;
       font-size: 1rem;
+    }
+  }
+}
+
+@media only screen and(max-height: 800px) {
+  .hero-container {
+    .hero-text {
+      top: 55.5%;
+    }
+    .hero-and {
+      font-size: 2rem;
     }
   }
 }

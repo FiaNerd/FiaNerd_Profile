@@ -9,9 +9,15 @@ $font-color: #ededed;
   display: grid;
   grid-template-rows: 10% auto;
   width: 80%;
-  margin: 3em auto;
-  .text-contact {
-    color: aliceblue;
+  margin: 2em auto;
+  gap: 1em;
+  .contact-title {
+    font-family: $headline-stack;
+    color: $golden-color;
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
   }
   form {
     display: grid;
@@ -19,15 +25,6 @@ $font-color: #ededed;
   }
   .form-input {
     display: grid;
-  }
-  h2 {
-    font-family: $headline-stack;
-    color: $golden-color;
-    font-size: 1.5rem;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    margin-bottom: 1em;
   }
   label {
     color: $font-color;
@@ -43,7 +40,7 @@ $font-color: #ededed;
     border-radius: 0.3em;
     margin-bottom: 1.7em;
   }
-  button {
+  .contact-btn {
     background-color: black;
     border: 2px solid $golden-color;
     border-radius: 0.7em;
@@ -56,7 +53,7 @@ $font-color: #ededed;
     font-weight: 700;
     cursor: pointer;
   }
-  button:hover {
+  .contact-btn:hover {
     color: $secondery-color;
     background-color: $golden-color;
   }
@@ -65,8 +62,9 @@ $font-color: #ededed;
 @media only screen and (min-width: 479px) {
   .form-container {
     max-width: 40em;
-    margin-top: 8em;
-    h2 {
+    margin-top: 5em;
+    gap: 2em;
+    .contact-title {
       font-size: 2.2rem;
     }
   }
