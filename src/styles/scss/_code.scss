@@ -5,6 +5,14 @@ $secondery-color: #0f0d0d;
 $golden-color: #a28950;
 $font-color: #ededed;
 
+.code-title {
+  font-family: $headline-stack;
+  color: $golden-color;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 2em;
+  font-size: 1.5rem;
+}
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -31,6 +39,14 @@ $font-color: #ededed;
 }
 
 @media only screen and (min-width: 697px) {
+  .code-title {
+    font-family: $headline-stack;
+    color: $golden-color;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 2em;
+    font-size: 2.2rem;
+  }
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 10em;
@@ -42,11 +58,11 @@ $font-color: #ededed;
     }
     .gallery-img-5 {
       grid-column: 1 / 2;
-      grid-row: 5 / 6;
+      grid-row: 4 / 5;
     }
     .gallery-img-6 {
       grid-column: 1 / 3;
-      grid-row: 4 / 5;
+      grid-row: 5 / 5;
     }
   }
 }
