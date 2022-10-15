@@ -59,7 +59,7 @@ a {
     font-family: $headline-stack;
     color: $golden-color;
     letter-spacing: 0.1rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     -webkit-text-fill-color: white;
     -webkit-text-stroke: 1px;
     text-align: center;
@@ -84,12 +84,13 @@ header {
 .navbar {
   display: flex;
   flex-direction: column;
-  padding: 0 0.8em;
+  padding: 0.5em 0.8em;
   top: 0;
 
   .logo {
     color: $font-color;
     font-family: $headline-stack;
+    font-size: 1.1em;
     text-align: center;
     margin-bottom: 0.6em;
     letter-spacing: 0.5rem;
@@ -241,13 +242,38 @@ footer {
   margin-bottom: 0.5em;
 }
 
-@media only screen and (min-width: 697px) {
+@media only screen and (min-width: 669px) {
   .header-banner-container {
     .header-banner-text {
       font-size: 2rem;
     }
   }
 
+  .hero-container {
+    .hero-text {
+      color: $golden-color;
+      font-size: 1.6em;
+      top: 62%;
+      padding: 1em 1.6em;
+      background-color: #151010be;
+    }
+    .hero-and {
+      font-size: 3rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 940px) and (max-height: 420px) {
+  footer {
+    position: static;
+  }
+}
+@media only screen and (min-width: 767px) {
+  .header-banner-container {
+    .header-banner-text {
+      font-size: 2.3rem;
+    }
+  }
   .navbar {
     display: flex;
     flex-direction: row;
@@ -294,25 +320,6 @@ footer {
     }
   }
   .hero-container {
-    .hero-text {
-      color: $golden-color;
-      font-size: 1.6em;
-      top: 62%;
-      padding: 1em 1.6em;
-      background-color: #151010be;
-    }
-    .hero-and {
-      font-size: 3rem;
-    }
-  }
-}
-@media only screen and (min-width: 767px) {
-  .header-banner-container {
-    .header-banner-text {
-      font-size: 2.7rem;
-    }
-  }
-  .hero-container {
     display: flex;
     background-image: url("/src/img/desktop/hero_profile.png");
   }
@@ -329,6 +336,17 @@ footer {
       color: $font-color;
       text-align: center;
       font-size: 1rem;
+    }
+  }
+}
+
+@media only screen and(max-height: 800px) {
+  .hero-container {
+    .hero-text {
+      top: 55.5%;
+    }
+    .hero-and {
+      font-size: 2rem;
     }
   }
 }
