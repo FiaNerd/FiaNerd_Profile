@@ -44,24 +44,25 @@ li {
 a {
   text-decoration: none;
 }
-.cover-header {
+.header-banner-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../banner_sticky.jpg);
+  background-image: url(/src/img/banner_bakcground.jpg);
   object-fit: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   height: 6em;
   background-color: #ffffff;
-  .cover-text {
+  .header-banner-text {
     font-family: $headline-stack;
     color: $golden-color;
     letter-spacing: 0.1rem;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     -webkit-text-fill-color: white;
     -webkit-text-stroke: 1px;
+    text-align: center;
   }
 }
 .wrapper {
@@ -91,6 +92,14 @@ header {
     font-family: $headline-stack;
     text-align: center;
     margin-bottom: 0.6em;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    &::before {
+      content: "[";
+    }
+    &::after {
+      content: "]";
+    }
     a {
       color: $font-color;
     }
@@ -156,7 +165,7 @@ header {
   .hero-text {
     position: fixed;
     color: $golden-color;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     letter-spacing: 1.1em;
     text-align: center;
     left: 50%;
@@ -233,12 +242,12 @@ footer {
 }
 
 @media only screen and (min-width: 697px) {
-  .cover-header {
-    .cover-text {
-      font-size: 3rem;
-      line-height: 0.9em;
+  .header-banner-container {
+    .header-banner-text {
+      font-size: 2rem;
     }
   }
+
   .navbar {
     display: flex;
     flex-direction: row;
@@ -298,6 +307,11 @@ footer {
   }
 }
 @media only screen and (min-width: 767px) {
+  .header-banner-container {
+    .header-banner-text {
+      font-size: 2.7rem;
+    }
+  }
   .hero-container {
     display: flex;
     background-image: url("/src/img/desktop/hero_profile.png");
